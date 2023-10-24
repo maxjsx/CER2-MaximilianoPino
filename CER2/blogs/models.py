@@ -22,7 +22,8 @@ class Post(models.Model):
             # Set the author to a default user or the currently logged-in user
             self.author = User.objects.get(username='your_default_author_username')
         super().save(*args, **kwargs)
-    
+    class Meta:
+        ordering = ["-date_created"]
 class Category(models.Model):
     title = models.CharField(max_length=255)
     slug = models.SlugField(unique=True) 
