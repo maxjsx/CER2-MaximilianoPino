@@ -68,6 +68,7 @@
                         
                         <div class="card-body">
                             <h5 class="card-title">{{ post.title }}</h5>
+                            <p class="blog-post-meta">{{ post.date_created.date }}. {{post.author}}</p>
                             <p class="card-text">{{ post.overview }}</p>
                             <p class="card-text">{{ post.content }}</p>
                             <a href="link1.html" class="btn btn-link text-primary">Leer Post</a>
